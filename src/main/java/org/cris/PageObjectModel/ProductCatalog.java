@@ -23,11 +23,29 @@ public class ProductCatalog extends AbstractComponents {
     @FindBy(css = ".mb-3")
     List<WebElement> products;
 
+    @FindBy(css = ".ng-animating")
+    WebElement spinner;
+
     By prodcutBy = By.cssSelector(".mb-3");
+    By addTocart =  By.cssSelector(".card-body button:last-of-type");
+    By toastMessage = By.cssSelector("#toast-container");
 
     public List<WebElement> getProdcutList(){
         waitForElementToAppear(prodcutBy);
         return products;
+    }
+
+    public WebElement getProductsByName(String productName){
+        WebElement prod = getProdcutList().stream().filter(product -> product.findElement(By.cssSelector("b")).getText().equals(productName))
+                .findFirst().orElse(null);
+        return prod;
+    }
+
+    public void addProductTocart(String productName){
+        WebElement prod = getProductsByName(productName);
+        prod.findElement(addTocart).click();
+        waitForElementToAppear(toastMessage);
+        waitForElementDissappear(spinner);
     }
 
 
