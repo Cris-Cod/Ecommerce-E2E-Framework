@@ -25,12 +25,22 @@ public class LandingPage extends AbstractComponents {
     @FindBy(id = "login")
     WebElement btnLogin;
 
+
+    @FindBy(css = "[class*='flyInOut']")
+    WebElement errorMessage;
+
     public ProductCatalog loginAplication(String email, String password){
         userEmail.sendKeys(email);
         pass.sendKeys(password);
         btnLogin.click();
         ProductCatalog productCatalog = new ProductCatalog(driver);
         return productCatalog;
+    }
+
+    public String getErrorMessage(){
+        waitForWebElementToAppear(errorMessage);
+        return errorMessage.getText();
+
     }
 
     public void goTo(){

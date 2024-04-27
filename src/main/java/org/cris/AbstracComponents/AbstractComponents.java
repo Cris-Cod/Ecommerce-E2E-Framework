@@ -1,6 +1,7 @@
 package org.cris.AbstracComponents;
 
 import org.cris.PageObjectModel.CartPage;
+import org.cris.PageObjectModel.OrderPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,14 +23,18 @@ public class AbstractComponents {
     @FindBy(css = "button[routerlink='/dashboard/cart']")
     WebElement cartHeader;
 
+    @FindBy(css = "button[routerlink='/dashboard/myorders']")
+    WebElement btnOrder;
+
     public void waitForElementToAppear(By findBy){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
     }
 
-    public void waitForElementDissappear(WebElement element){
-       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.invisibilityOf(element));
+    public void waitForElementDissappear() throws InterruptedException {
+        Thread.sleep(1000);
+        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+        //wait.until(ExpectedConditions.invisibilityOf(element));
 
     }
 
@@ -37,6 +42,17 @@ public class AbstractComponents {
        cartHeader.click();
         CartPage cartPage = new CartPage(driver);
         return cartPage;
+    }
+
+    public OrderPage goToOrderPage(){
+        btnOrder.click();
+        OrderPage orderPage = new OrderPage(driver);
+        return orderPage;
+    }
+
+    public void waitForWebElementToAppear(WebElement findBy){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOf(findBy));
     }
 
 }
