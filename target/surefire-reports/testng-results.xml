@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-28T15:55:13 COT" name="All Test Suite" finished-at="2024-04-28T15:55:39 COT" duration-ms="26104">
+    <groups>
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:org.cris.Test.SubmitOrderTest@70ed52de]" name="submitOrder" class="org.cris.Test.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
+      <group name="ErrorHandling">
+        <method signature="ErrorValidations.LoginErrorValidation()[pri:0, instance:org.cris.Test.ErrorValidations@6d4d66d2]" name="LoginErrorValidation" class="org.cris.Test.ErrorValidations"/>
+      </group> <!-- ErrorHandling -->
+    </groups>
+    <test started-at="2024-04-28T15:55:13 COT" name="Error Validations" finished-at="2024-04-28T15:55:29 COT" duration-ms="16015">
+      <class name="org.cris.Test.ErrorValidations">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:org.cris.Test.ErrorValidations@6d4d66d2]" started-at="2024-04-28T15:55:13 COT" name="launchApplication" finished-at="2024-04-28T15:55:20 COT" duration-ms="6311" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="LoginErrorValidation()[pri:0, instance:org.cris.Test.ErrorValidations@6d4d66d2]" started-at="2024-04-28T15:55:20 COT" name="LoginErrorValidation" finished-at="2024-04-28T15:55:21 COT" duration-ms="1109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginErrorValidation -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:org.cris.Test.ErrorValidations@6d4d66d2]" started-at="2024-04-28T15:55:21 COT" name="TearDown" finished-at="2024-04-28T15:55:21 COT" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:org.cris.Test.ErrorValidations@6d4d66d2]" started-at="2024-04-28T15:55:21 COT" name="launchApplication" finished-at="2024-04-28T15:55:26 COT" duration-ms="5486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="ProductErrorValidation()[pri:0, instance:org.cris.Test.ErrorValidations@6d4d66d2]" started-at="2024-04-28T15:55:26 COT" name="ProductErrorValidation" finished-at="2024-04-28T15:55:29 COT" duration-ms="2891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProductErrorValidation -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:org.cris.Test.ErrorValidations@6d4d66d2]" started-at="2024-04-28T15:55:29 COT" name="TearDown" finished-at="2024-04-28T15:55:29 COT" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- org.cris.Test.ErrorValidations -->
+    </test> <!-- Error Validations -->
+    <test started-at="2024-04-28T15:55:13 COT" name="Submit Order test" finished-at="2024-04-28T15:55:39 COT" duration-ms="26104">
+      <class name="org.cris.Test.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:org.cris.Test.SubmitOrderTest@70ed52de]" started-at="2024-04-28T15:55:13 COT" name="launchApplication" finished-at="2024-04-28T15:55:20 COT" duration-ms="6087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:org.cris.Test.SubmitOrderTest@70ed52de]" started-at="2024-04-28T15:55:20 COT" name="submitOrder" data-provider="getData" finished-at="2024-04-28T15:55:23 COT" duration-ms="3924" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=M123456#n, product=ADIDAS ORIGINAL, email=krisx@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:org.cris.Test.SubmitOrderTest@70ed52de]" started-at="2024-04-28T15:55:23 COT" name="TearDown" finished-at="2024-04-28T15:55:24 COT" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:org.cris.Test.SubmitOrderTest@70ed52de]" started-at="2024-04-28T15:55:24 COT" name="launchApplication" finished-at="2024-04-28T15:55:29 COT" duration-ms="5472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:org.cris.Test.SubmitOrderTest@70ed52de]" started-at="2024-04-28T15:55:29 COT" name="submitOrder" data-provider="getData" finished-at="2024-04-28T15:55:33 COT" duration-ms="3798" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=S589624fg$, product=IPHONE 13 PRO, email=arwon@gmail.com}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:org.cris.Test.SubmitOrderTest@70ed52de]" started-at="2024-04-28T15:55:33 COT" name="TearDown" finished-at="2024-04-28T15:55:33 COT" duration-ms="76" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:org.cris.Test.SubmitOrderTest@70ed52de]" started-at="2024-04-28T15:55:33 COT" name="launchApplication" finished-at="2024-04-28T15:55:38 COT" duration-ms="5384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="OrderHistoryTest()[pri:0, instance:org.cris.Test.SubmitOrderTest@70ed52de]" started-at="2024-04-28T15:55:38 COT" name="OrderHistoryTest" finished-at="2024-04-28T15:55:39 COT" depends-on-methods="org.cris.Test.SubmitOrderTest.submitOrder" duration-ms="1019" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OrderHistoryTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:org.cris.Test.SubmitOrderTest@70ed52de]" started-at="2024-04-28T15:55:39 COT" name="TearDown" finished-at="2024-04-28T15:55:39 COT" duration-ms="92" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- org.cris.Test.SubmitOrderTest -->
+    </test> <!-- Submit Order test -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

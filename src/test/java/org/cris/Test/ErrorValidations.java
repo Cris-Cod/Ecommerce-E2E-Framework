@@ -7,6 +7,7 @@ import org.cris.PageObjectModel.CheckOutPage;
 import org.cris.PageObjectModel.ConfirmationPage;
 import org.cris.PageObjectModel.ProductCatalog;
 import org.cris.TestComponents.BaseTest;
+import org.cris.TestComponents.Retry;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -19,14 +20,14 @@ public class ErrorValidations extends BaseTest {
     //krisx@gmail.com
     // M123456#n
 
-    @Test(groups = {"ErrorHandling"})
+    @Test(groups = {"ErrorHandling"}, retryAnalyzer = Retry.class)
     public void LoginErrorValidation() throws IOException, InterruptedException {
 
         String prodcutName = "ADIDAS ORIGINAL";
 
 
         landingPage.loginAplication("krisx@gmail.com", "M123456#n155");
-        Assert.assertEquals("Incorrect email password." ,landingPage.getErrorMessage());;
+        Assert.assertEquals("Incorrect email or password." ,landingPage.getErrorMessage());;
 
     }
 
